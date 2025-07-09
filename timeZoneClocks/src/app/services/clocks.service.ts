@@ -18,6 +18,7 @@ export class ClocksService {
   }
 
   addClock(){
+    this.clockInfo.push({timeZone: 'Cordinated Universal Time (UTC)', isDigital: true})
 
   }
 
