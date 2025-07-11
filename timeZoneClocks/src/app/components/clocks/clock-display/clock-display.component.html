@@ -37,11 +37,30 @@
     </div>
   </div>
 
-  <div class="digital" *ngFor="let clock of clockList; index as i">
-    {{ time | date: 'hh:mm:ss a':"UTC" }}
-    {{this.clockList[index].timeZone}} <!-- This code might have to be replaced with an ID that shows the
-    selected time zone-->
+  <div class="digital" *ngFor="let clock of clockList; index as i" [ngSwitch]="this.clockList[index].timeZone">
+    <div *ngSwitchCase="'Coordinated Universal Time'">
+        {{ time | date: 'hh:mm:ss a':"UTC" }}
+        {{this.clockList[index].timeZone}}
+    </div>
+    <div *ngSwitchCase="'Americas/Detroit'">
+        {{ time | date: 'hh:mm:ss a': '-0400' }}
+        {{this.clockList[index].timeZone}}
+    </div>
+    <div *ngSwitchCase="'Americas/Chicago'">
+        {{ time | date: 'hh:mm:ss a': '-0500' }}
+        {{this.clockList[index].timeZone}}
+    </div>
+    <div *ngSwitchCase="'Americas/Chihuahua'">
+      {{ time | date: 'hh:mm:ss a': '-0600' }}
+      {{this.clockList[index].timeZone}}
+    </div>
+    <div *ngSwitchCase="'Americas/Los Angeles'">
+      {{ time | date: 'hh:mm:ss a': '-0700' }}
+      {{this.clockList[index].timeZone}}
+    </div>
+
   </div>
+
 </div>
 
 
