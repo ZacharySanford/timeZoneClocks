@@ -9,8 +9,10 @@ export class ClocksService {
   clockInfo : Clock[] = []
 
   constructor() {
-    this.clockInfo.push({timeZone: 'Americas/Detroit', isDigital: false})
-    this.clockInfo.push({timeZone: 'Asia/Seoul', isDigital: true})
+    this.clockInfo.push({id: 1, timeZone: 'Americas/Detroit', isDigital: false})
+    this.clockInfo.push({id: 2, timeZone: 'Americas/Chicago', isDigital: true})
+    this.clockInfo.push({id: 3, timeZone: 'Americas/Chihuahua', isDigital: true})
+    this.clockInfo.push({id: 4, timeZone: 'Americas/Los Angeles', isDigital: true})
    }
 
   getClockInfo() : Clock[] {
@@ -18,7 +20,7 @@ export class ClocksService {
   }
 
   addClock(){
-    this.clockInfo.push({timeZone: 'Cordinated Universal Time (UTC)', isDigital: true})
+    this.clockInfo.push({id: 5, timeZone: 'Coordinated Universal Time (UTC)', isDigital: true})
 
   }
 
@@ -27,7 +29,7 @@ export class ClocksService {
   }
 
   deleteClock(){
-    
+
   }
 
 }

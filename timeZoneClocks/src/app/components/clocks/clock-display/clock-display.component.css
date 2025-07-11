@@ -1,0 +1,137 @@
+.clock-dial {
+    width: 500px;
+    height: 500px;
+    border: 20px solid grey;
+    border-radius: 50%;
+    background-color: white;
+    margin: 0 auto;
+    position: relative;
+    box-shadow: 5px 5px 10px black;
+}
+
+.point {
+    width: 20px;
+    height: 20px;
+    background-color: black;
+    border-radius: 50%;
+    position: absolute;
+    top: 240px;
+    left: 240px;
+    z-index: 10;
+}
+
+.hour {
+    font-size: 30px;
+    font-weight: bold;
+    color: #372c2e;
+    position: absolute;
+}
+
+.hour-1  { top: 60px;  left: 340px; }
+.hour-2  { top: 130px; left: 400px; }
+.hour-3  { top: 235px; left: 445px; }
+.hour-4  { top: 330px; left: 400px; }
+.hour-5  { top: 400px; left: 340px; }
+.hour-6  { top: 440px; left: 235px; }
+.hour-7  { top: 400px; left: 130px; }
+.hour-8  { top: 330px; left: 60px; }
+.hour-9  { top: 235px; left: 15px; }
+.hour-10 { top: 130px; left: 60px; }
+.hour-11 { top: 60px;  left: 130px; }
+.hour-12 { top: 10px;  left: 235px; }
+
+.brand {
+    font-size: 20px;
+    font-weight: bold;
+    color: brown;
+    position: absolute;
+    top: 90px;
+    left: 42%;
+}
+
+.minute-hand-wrapper,
+.hour-hand-wrapper,
+.second-hand-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 500px;
+    height: 500px;
+}
+
+.minute-hand,
+.hour-hand,
+.second-hand {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.minute-hand .hand {
+    width: 4px;
+    height: 180px;
+    background-color: brown;
+    position: absolute;
+    top: 70px;
+    left: 248px;
+    transform-origin: bottom center;
+    transition: transform 0.5s ease-in-out;
+}
+
+.minute-hand .arrow {
+    font-size: 20px;
+    font-weight: bold;
+    color: brown;
+    position: absolute;
+    left: 242px;
+    top: 60px;
+}
+
+.hour-hand .hand {
+    width: 6px;
+    height: 120px;
+    background-color: brown;
+    position: absolute;
+    top: 120px;
+    left: 247px;
+    transform-origin: bottom center;
+    transition: transform 0.5s ease-in-out;
+}
+
+.hour-hand .arrow {
+    font-size: 20px;
+    font-weight: bold;
+    color: brown;
+    position: absolute;
+    left: 240px;
+    top: 110px;
+}
+
+.second-hand .hand {
+    width: 2px;
+    height: 200px;
+    background-color: red;
+    position: absolute;
+    top: 50px;
+    left: 249px;
+    transform-origin: bottom center;
+    transition: transform 0.2s linear;
+}
+.clock-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap:10px; /* space between clock and digital time */
+}
+
+.clock-wrapper {
+  transform: scale(0.6); /* 🔍 Scale down the entire clock */
+  transform-origin: center;
+}
+
+.digital {
+  font-size: 2rem;
+  color: #333;
+
+}
