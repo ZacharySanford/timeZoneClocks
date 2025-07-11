@@ -1,14 +1,5 @@
-.clock-dial {
-    width: 500px;
-    height: 500px;
-    border: 20px solid grey;
-    border-radius: 50%;
-    background-color: white;
-    margin: 0 auto;
-    position: relative;
-    box-shadow: 5px 5px 10px black;
-}
 
+<<<<<<< HEAD
 .point {
     width: 20px;
     height: 20px;
@@ -135,4 +126,6 @@
   color: #333;
   
 }
+=======
+>>>>>>> 844b5a4aeb073313220427f6ef1a87146b6586d0
 
