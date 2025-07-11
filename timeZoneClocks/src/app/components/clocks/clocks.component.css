@@ -126,7 +126,7 @@
 }
 
 .clock-wrapper {
-  transform: scale(0.6); /* 🔍 Scale down the entire clock */
+  transform: scale(0.6); /* Scale down the entire clock */
   transform-origin: center;
 }
 
