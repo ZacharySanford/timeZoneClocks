@@ -1,18 +1,22 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy, ViewChild, ElementRef } from '@angular/core';
 import { Clock } from '../../../interfaces/clock';
 import { ClocksService } from '../../../services/clocks.service';
 import { CommonModule, DatePipe } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+
 
 
 @Component({
   selector: 'app-clock-display',
-  imports: [CommonModule],
+  imports: [CommonModule,FormsModule],
   templateUrl: './clock-display.component.html',
   styleUrl: './clock-display.component.css'
 })
 
 
 export class ClockDisplayComponent implements OnInit, OnDestroy {
+
+  @ViewChild('digital') digital!: ElementRef;
 
   time = new Date();
   intervalId: any;
@@ -49,11 +53,8 @@ export class ClockDisplayComponent implements OnInit, OnDestroy {
 
   index = 0;
 
-  setTimezone(index: number){
-    if(this.clockList[index].timeZone == 'Americas/Detroit'){
-
-  }
-
 
 }
-}
+
+
+
