@@ -14,7 +14,6 @@ export class ClocksService {
     this.clockInfo.push({id: 3, timeZone: 'Americas/Chihuahua', isDigital: true})
     this.clockInfo.push({id: 4, timeZone: 'Americas/Los Angeles', isDigital: true})
    }
-
   getClockInfo() : Clock[] {
     return this.clockInfo;
   }
